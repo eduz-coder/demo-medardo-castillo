@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medardo Castillo | Fine Art Wedding Photography</title>
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        showit: {
+                            bg: '#F9F8F6',      /* Crema */
+                            dark: '#2A2A2A',    /* Carbón */
+                            accent: '#C5B5A1',  /* Arena/Taupe */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                        script: ['"Pinyon Script"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos base y utilidades para el efecto Showit */
+        html { scroll-behavior: smooth; }
+        body { background-color: #F9F8F6; }
+        
+        /* Efecto de superposición de imágenes asimétricas */
+        .showit-overlap {
+            box-shadow: 20px 20px 0px 0px rgba(197, 181, 161, 0.2);
+        }
+
+        /* Animaciones sutiles */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-showit-dark antialiased">
+
+    <!-- 1. Navegación Minimalista -->
+    <nav class="absolute w-full z-50 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.25em] font-medium text-showit-dark">
+                <a href="#experiencia" class="hover:text-showit-accent transition-colors duration-300">El Enfoque</a>
+                <a href="#portafolio" class="hover:text-showit-accent transition-colors duration-300">Journal</a>
+            </div>
+            
+            <div class="text-center cursor-pointer mx-auto md:mx-0">
+                <h1 class="font-serif text-3xl md:text-4xl tracking-widest uppercase leading-none">Medardo</h1>
+                <span class="font-script text-2xl md:text-3xl text-showit-accent capitalize block -mt-3">Castillo</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.25em] font-medium text-showit-dark items-center">
+                <a href="#testimonios" class="hover:text-showit-accent transition-colors duration-300">Reseñas</a>
+                <a href="https://wa.me/50584620198" target="_blank" class="border-b border-showit-dark pb-1 hover:text-showit-accent hover:border-showit-accent transition-colors duration-300">Cotizar</a>
+            </div>
+
+            <!-- Menú Móvil -->
+            <div class="md:hidden text-2xl text-showit-dark absolute right-6">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (Pantalla Dividida) -->
+    <section class="min-h-screen flex flex-col md:flex-row pt-24 md:pt-0">
+        <!-- Texto Izquierda -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center items-center p-10 md:p-20 text-center bg-showit-bg fade-in-up">
+            <span class="text-[9px] uppercase tracking-[0.4em] text-showit-accent mb-6 block">Nicaragua & Destinos</span>
+            <h2 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
+                Elegancia<br>
+                <span class="italic font-light text-showit-accent">&</span> Autenticidad
+            </h2>
+            <p class="font-sans text-xs md:text-sm font-light text-showit-dark/70 max-w-sm mb-12 leading-relaxed">
+                Documentando historias de amor reales con una estética atemporal, editorial y romántica para parejas modernas.
+            </p>
+            <a href="https://wa.me/50584620198" target="_blank" class="inline-block bg-showit-dark text-white px-10 py-4 text-[10px] uppercase tracking-[0.25em] hover:bg-showit-accent transition-colors duration-500">
+                Reserva tu fecha
+            </a>
+        </div>
+        
+        <!-- Imagen Derecha -->
+        <div class="w-full md:w-1/2 h-[60vh] md:h-screen fade-in-up delay-200">
+            <img src="https://images-pw.pixieset.com/elementfield/ed3OGeZ/MCV00522-628787a5-2500.jpg" alt="Fotografía de Bodas Fine Art" class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <!-- 3. Sección Experiencia (Asimétrica y Superpuesta) -->
+    <section id="experiencia" class="py-32 bg-white relative">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Imagen con bloque superpuesto -->
+                <div class="w-full lg:w-1/2 relative lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Detalles nupciales" class="w-[90%] showit-overlap object-cover aspect-[4/5] z-10 relative">
+                    
+                    <!-- Recuadro flotante (Típico de Showit) -->
+                    <div class="absolute -bottom-8 -right-4 md:-right-8 bg-showit-bg p-8 md:p-12 shadow-sm border border-showit-accent/20 max-w-[280px] z-20 hidden sm:block">
+                        <p class="font-script text-4xl text-showit-accent leading-none">Momentos</p>
+                        <p class="font-serif text-xl uppercase tracking-widest mt-3 leading-snug text-showit-dark">efímeros,<br>recuerdos<br>eternos.</p>
+                    </div>
+                </div>
+                
+                <!-- Contenido de Texto -->
+                <div class="w-full lg:w-1/2 mt-12 lg:mt-0 fade-in-up delay-400">
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-showit-accent mb-4 block">Filosofía</span>
+                    <h3 class="font-serif text-4xl md:text-5xl mb-8 leading-tight">Tu legado visual <br><span class="italic text-showit-accent font-light">hecho arte.</span></h3>
+                    
+                    <div class="space-y-6 text-xs md:text-sm font-light text-showit-dark/70 leading-loose text-justify">
+                        <p>
+                            Mi filosofía de trabajo combina el fotoperiodismo discreto con la dirección editorial. No se trata solo de tomar fotos, sino de capturar la atmósfera, la tensión de una mirada y la calidez de un abrazo sincero.
+                        </p>
+                        <p>
+                            Me enfoco en la luz natural, composiciones limpias y un estilo de edición cinematográfico que asegura que tus fotografías luzcan tan perfectas hoy como dentro de cincuenta años.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <span class="font-script text-4xl text-showit-dark opacity-60">Medardo Castillo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Portafolio (Grid Asimétrica) -->
+    <section id="portafolio" class="py-32 bg-showit-bg">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-20 fade-in-up">
+            <span class="text-[10px] uppercase tracking-[0.3em] text-showit-accent block mb-4">Portafolio</span>
+            <h3 class="font-serif text-4xl md:text-5xl">Historias Recientes</h3>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Grid Asimétrica -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Columna 1 -->
+                <div class="flex flex-col gap-8 transform md:translate-y-12">
+                    <div class="overflow-hidden group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pre-boda" class="w-full object-cover h-80 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Detalle vestido" class="w-full object-cover h-96 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+                
+                <!-- Columna 2 (Central Destacada) -->
+                <div class="flex flex-col gap-8 md:-translate-y-8">
+                    <div class="overflow-hidden group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Retrato Novios" class="w-full object-cover h-[34rem] group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="text-center pt-4">
+                        <a href="https://wa.me/50584620198" target="_blank" class="font-serif italic text-2xl text-showit-accent hover:text-showit-dark transition-colors duration-300">Ver galería completa &rarr;</a>
+                    </div>
+                </div>
+                
+                <!-- Columna 3 -->
+                <div class="flex flex-col gap-8 transform md:translate-y-4">
+                    <div class="overflow-hidden group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paisaje boda" class="w-full object-cover h-[28rem] group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="overflow-hidden group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Anillos" class="w-full object-cover h-64 group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonio (Fondo Oscuro) -->
+    <section id="testimonios" class="py-32 bg-showit-dark text-white text-center px-6">
+        <div class="max-w-3xl mx-auto fade-in-up">
+            <span class="font-script text-7xl text-showit-accent block mb-4 leading-none">"</span>
+            <p class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed mb-12 italic font-light text-white/90">
+                La sensibilidad de Medardo para capturar los detalles es irreal. Logró que cada fotografía pareciera un cuadro sacado de un museo. Es el mejor recuerdo que podríamos tener de nuestra boda.
+            </p>
+            <span class="font-sans text-[9px] uppercase tracking-[0.3em] text-showit-accent block">Valeria & Andrés — Boda en Managua</span>
+        </div>
+    </section>
+
+    <!-- 6. Footer Elegante -->
+    <footer class="bg-white pt-32 pb-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-5xl md:text-6xl mb-8 text-showit-dark">Comencemos a crear.</h2>
+            <p class="font-sans text-xs md:text-sm text-showit-dark/60 max-w-md mx-auto mb-12 font-light leading-relaxed">
+                Agenda abierta para 2027. Las fechas se reservan rápidamente. Hablemos sobre los detalles de tu día especial.
+            </p>
+            
+            <a href="https://wa.me/50584620198?text=Hola%20Medardo,%20me%20encanta%20tu%20trabajo%20y%20quisiera%20cotizar." target="_blank" class="inline-block bg-showit-accent text-white px-12 py-5 text-[10px] font-medium uppercase tracking-[0.3em] hover:bg-showit-dark transition-colors duration-500 mb-32">
+                Solicitar Cotización
+            </a>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-showit-dark/10 pt-8">
+                <p class="font-sans text-[9px] text-showit-dark/50 uppercase tracking-[0.2em] mb-6 md:mb-0">
+                    &copy; 2026 Medardo Castillo Photography
+                </p>
+                
+                <div class="text-center md:hidden mb-6">
+                    <h1 class="font-serif text-xl tracking-widest uppercase leading-none">Medardo</h1>
+                </div>
+
+                <div class="flex space-x-8 text-showit-dark/70">
+                    <a href="#" class="hover:text-showit-accent transition-colors duration-300"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="hover:text-showit-accent transition-colors duration-300"><i class="fab fa-pinterest-p text-lg"></i></a>
+                    <a href="#" class="hover:text-showit-accent transition-colors duration-300"><i class="fab fa-facebook-f text-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 7. Botón WhatsApp Flotante -->
+    <a href="https://wa.me/50584620198" target="_blank" class="fixed bottom-8 right-8 bg-showit-dark text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-xl z-50 hover:bg-showit-accent transition-colors duration-500" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
