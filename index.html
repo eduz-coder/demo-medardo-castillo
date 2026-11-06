@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medardo Castillo | Fotografía Profesional y Bodas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#faf9f7',
+                            gold: '#d4af37',
+                            dark: '#1a1a1a',
+                            gray: '#8c8c8c'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        /* Dropdown CSS para el menú */
+        .dropdown:hover .dropdown-menu { display: block; }
+        
+        /* Hero Parallax con la foto oficial de Medardo */
+        .hero-bg {
+            background-image: linear-gradient(rgba(26, 26, 26, 0.4), rgba(26, 26, 26, 0.6)), url('https://images-pw.pixieset.com/elementfield/ed3OGeZ/MCV00522-628787a5-2500.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Hover de galería */
+        .gallery-item { break-inside: avoid; margin-bottom: 1rem; }
+        .overlay { background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%); }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-brand-light antialiased">
+
+    <!-- Top Bar Opcional (Contacto rápido) -->
+    <div class="hidden md:flex justify-between items-center bg-brand-dark text-white px-8 py-2 text-xs tracking-widest uppercase">
+        <span>Managua, Nicaragua | Disponibilidad Internacional</span>
+        <div class="flex space-x-4">
+            <a href="https://wa.me/50584620198" target="_blank" class="hover:text-brand-gold transition"><i class="fab fa-whatsapp mr-2"></i>+505 8462 0198</a>
+            <a href="mailto:info@medardocastillo.com" class="hover:text-brand-gold transition"><i class="far fa-envelope mr-2"></i>info@medardocastillo.com</a>
+        </div>
+    </div>
+
+    <!-- Navegación Principal Compleja -->
+    <nav class="sticky top-0 w-full z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100 transition-all" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <h1 class="font-serif text-3xl font-bold tracking-widest text-brand-dark uppercase leading-none">Medardo</h1>
+                    <span class="text-xs uppercase tracking-[0.3em] text-brand-gray">Castillo</span>
+                </div>
+                
+                <!-- Menú Desktop con Dropdowns -->
+                <div class="hidden lg:flex space-x-10 items-center">
+                    <a href="#" class="text-sm uppercase tracking-widest font-semibold hover:text-brand-gold transition">Inicio</a>
+                    
+                    <!-- Dropdown Portafolio -->
+                    <div class="dropdown relative py-8">
+                        <a href="#portafolio" class="text-sm uppercase tracking-widest hover:text-brand-gold transition flex items-center">
+                            Portafolio <i class="fas fa-chevron-down text-[10px] ml-2"></i>
+                        </a>
+                        <ul class="dropdown-menu absolute hidden top-full left-0 bg-white shadow-xl border-t-2 border-brand-gold w-48 py-2 z-50">
+                            <li><a href="#portafolio" class="block px-6 py-3 text-sm hover:bg-brand-light hover:text-brand-gold transition">Bodas</a></li>
+                            <li><a href="#portafolio" class="block px-6 py-3 text-sm hover:bg-brand-light hover:text-brand-gold transition">Sesiones Pre-boda</a></li>
+                            <li><a href="#portafolio" class="block px-6 py-3 text-sm hover:bg-brand-light hover:text-brand-gold transition">Eventos Sociales</a></li>
+                            <li><a href="#portafolio" class="block px-6 py-3 text-sm hover:bg-brand-light hover:text-brand-gold transition">Retratos</a></li>
+                        </ul>
+                    </div>
+
+                    <a href="#sobre-mi" class="text-sm uppercase tracking-widest hover:text-brand-gold transition">Sobre Mí</a>
+                    <a href="#paquetes" class="text-sm uppercase tracking-widest hover:text-brand-gold transition">Paquetes</a>
+                    <a href="#testimonios" class="text-sm uppercase tracking-widest hover:text-brand-gold transition">Reseñas</a>
+                    
+                    <!-- Botón CTA en NavBar -->
+                    <a href="https://wa.me/50584620198?text=Hola,%20quisiera%20consultar%20disponibilidad." target="_blank" class="border border-brand-dark px-6 py-3 text-xs uppercase tracking-widest hover:bg-brand-dark hover:text-white transition duration-300">
+                        Consultar Fecha
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section con múltiples botones -->
+    <section class="hero-bg h-[85vh] flex items-center justify-center text-center">
+        <div class="px-4">
+            <h2 class="text-brand-gold text-xl italic font-serif mb-6">Fotografía Documental & Artística</h2>
+            <h1 class="text-white text-5xl md:text-7xl font-serif mb-10 max-w-5xl mx-auto leading-tight">Preservando el legado <br>de tu historia de amor</h1>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#portafolio" class="bg-brand-gold text-white px-10 py-4 font-serif text-lg tracking-widest uppercase hover:bg-white hover:text-brand-dark transition duration-300 w-full sm:w-auto text-center">
+                    Ver Galerías
+                </a>
+                <a href="https://wa.me/50584620198" target="_blank" class="border-2 border-white text-white px-10 py-4 font-serif text-lg tracking-widest uppercase hover:bg-white hover:text-brand-dark transition duration-300 w-full sm:w-auto text-center">
+                    Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí Section -->
+    <section id="sobre-mi" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1554046920-90dcac416b1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Medardo Castillo" class="shadow-2xl">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h3 class="font-serif text-4xl mb-6 text-brand-dark">Detrás del Lente</h3>
+                    <div class="w-16 h-0.5 bg-brand-gold mb-8"></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Con más de una década de experiencia capturando emociones reales, mi enfoque se basa en documentar tu día de manera auténtica y sin poses forzadas. Busco la luz perfecta, las lágrimas de alegría y los abrazos sinceros.
+                    </p>
+                    <p class="text-gray-600 mb-10 leading-relaxed">
+                        Cada pareja tiene una historia única, y mi pasión es traducirla en imágenes atemporales que atesorarás por generaciones.
+                    </p>
+                    <a href="#portafolio" class="text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition">Conoce mi estilo <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería / Portafolio (Masonry Grid) -->
+    <section id="portafolio" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h3 class="font-serif text-4xl mb-4">Portafolio Destacado</h3>
+            <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-8"></div>
+            <!-- Filtros simulados visualmente -->
+            <div class="flex justify-center space-x-6 text-sm uppercase tracking-widest text-brand-gray font-semibold mb-12">
+                <span class="text-brand-dark border-b border-brand-dark cursor-pointer">Todas</span>
+                <span class="hover:text-brand-dark cursor-pointer transition">Bodas</span>
+                <span class="hover:text-brand-dark cursor-pointer transition">Sesiones</span>
+                <span class="hover:text-brand-dark cursor-pointer transition">Editoriales</span>
+            </div>
+
+            <!-- Mosaico de Imágenes (Listas para actualizar) -->
+            <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+                <div class="gallery-item relative group overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boda" class="w-full object-cover transition duration-700 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-6 text-left">
+                        <h4 class="text-white font-serif text-xl">Boda Civil</h4>
+                        <p class="text-brand-gold text-sm uppercase tracking-widest">Managua</p>
+                    </div>
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boda" class="w-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sesión" class="w-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Anillos" class="w-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Exterior" class="w-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="gallery-item relative group overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pareja" class="w-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="https://wa.me/50584620198?text=Hola,%20me%20encantaron%20las%20fotos.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="inline-block border border-brand-dark px-8 py-3 text-sm uppercase tracking-widest hover:bg-brand-dark hover:text-white transition duration-300">
+                    Solicitar Catálogo Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paquetes y Precios -->
+    <section id="paquetes" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="font-serif text-4xl mb-4">Inversión</h3>
+                <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto">Selecciona la cobertura ideal para tu evento. Todos nuestros paquetes incluyen edición profesional y entrega en galería digital privada.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Paquete 1 -->
+                <div class="border border-gray-200 p-10 text-center hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-serif text-2xl mb-2">Esencial</h4>
+                        <p class="text-brand-gold font-bold mb-6 uppercase tracking-widest text-sm">Ceremonia & Recepción</p>
+                        <ul class="text-gray-600 mb-8 space-y-3 text-sm">
+                            <li>6 Horas de Cobertura</li>
+                            <li>1 Fotógrafo Profesional</li>
+                            <li>300+ Fotografías Editadas</li>
+                            <li>Galería Digital Online</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/50584620198?text=Me%20interesa%20cotizar%20el%20paquete%20Esencial" target="_blank" class="block bg-brand-light text-brand-dark py-3 uppercase tracking-widest text-xs font-bold hover:bg-brand-gold hover:text-white transition">Cotizar Paquete</a>
+                </div>
+                <!-- Paquete 2 (Destacado) -->
+                <div class="border-2 border-brand-gold p-10 text-center shadow-xl transform md:-translate-y-4 bg-brand-dark text-white flex flex-col justify-between relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-gold text-white px-4 py-1 text-xs uppercase tracking-widest">Más Popular</div>
+                    <div>
+                        <h4 class="font-serif text-2xl mb-2">Premium</h4>
+                        <p class="text-brand-gold font-bold mb-6 uppercase tracking-widest text-sm">Día Completo</p>
+                        <ul class="text-gray-300 mb-8 space-y-3 text-sm">
+                            <li>10 Horas de Cobertura</li>
+                            <li>2 Fotógrafos Profesionales</li>
+                            <li>Sesión Pre-Boda Incluida</li>
+                            <li>600+ Fotografías Editadas</li>
+                            <li>Álbum Impreso (20x20)</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/50584620198?text=Me%20interesa%20cotizar%20el%20paquete%20Premium" target="_blank" class="block bg-brand-gold text-white py-3 uppercase tracking-widest text-xs font-bold hover:bg-white hover:text-brand-dark transition">Cotizar Paquete</a>
+                </div>
+                <!-- Paquete 3 -->
+                <div class="border border-gray-200 p-10 text-center hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <h4 class="font-serif text-2xl mb-2">Cinematografía</h4>
+                        <p class="text-brand-gold font-bold mb-6 uppercase tracking-widest text-sm">Foto & Video</p>
+                        <ul class="text-gray-600 mb-8 space-y-3 text-sm">
+                            <li>Cobertura Ilimitada</li>
+                            <li>Equipo Completo (Foto + Video)</li>
+                            <li>Película de Boda (15 min)</li>
+                            <li>Trailer para Redes (1 min)</li>
+                            <li>Toma con Drone</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/50584620198?text=Me%20interesa%20cotizar%20el%20paquete%20de%20Foto%20y%20Video" target="_blank" class="block bg-brand-light text-brand-dark py-3 uppercase tracking-widest text-xs font-bold hover:bg-brand-gold hover:text-white transition">Cotizar Paquete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Robusto -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Columna 1 -->
+                <div class="col-span-1 md:col-span-1">
+                    <h1 class="font-serif text-2xl font-bold tracking-widest uppercase mb-6">Medardo</h1>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Capturando momentos auténticos y elegantes en Nicaragua y destinos internacionales.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-gold transition"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-brand-gold transition">Inicio</a></li>
+                        <li><a href="#sobre-mi" class="hover:text-brand-gold transition">Conoce al Fotógrafo</a></li>
+                        <li><a href="#portafolio" class="hover:text-brand-gold transition">Galería de Bodas</a></li>
+                        <li><a href="#testimonios" class="hover:text-brand-gold transition">Testimonios</a></li>
+                        <li><a href="#paquetes" class="hover:text-brand-gold transition">Inversión y Precios</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 3 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 uppercase tracking-wider">Servicios</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-brand-gold transition">Fotografía de Bodas</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Videografía de Bodas</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Sesiones de Compromiso</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Cobertura de Eventos</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition">Álbumes Fine Art</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Columna 4 -->
+                <div>
+                    <h4 class="font-serif text-lg mb-6 uppercase tracking-wider">Contacto Directo</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-brand-gold"></i> <span>Managua, Nicaragua</span></li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-brand-gold"></i> <span>+505 8462 0198</span></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-brand-gold"></i> <span>info@medardocastillo.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 text-center text-xs text-gray-500 uppercase tracking-widest">
+                <p>© 2026 Medardo Castillo Fotografía. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/50584620198?text=Hola%20Medardo,%20vengo%20de%20tu%20sitio%20web%20y%20quiero%20cotizar%20un%20evento." 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl z-50 hover:bg-[#128C7E] hover:scale-110 transition duration-300"
+       style="animation: pulse 2s infinite;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <style>
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</body>
+</html>
